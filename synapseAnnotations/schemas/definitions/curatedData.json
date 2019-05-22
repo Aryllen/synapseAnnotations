@@ -35,6 +35,16 @@
           "source": "http://semanticscience.org/resource/CHEMINF_000123"
         }
       ]
+    },
+    "referenceSet": {
+      "description": "A set of references (e.g., canonical assembled contigs) which defines a common coordinate space for comparing reference-aligned experimental data.",
+      "anyOf": [
+        {
+          "const": "GRCh38",
+          "description": "Genome Reference Consortium Human Build 38",
+          "source": "https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.26"
+        }
+      ]
     }
   }
 }

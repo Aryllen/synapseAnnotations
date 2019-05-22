@@ -2,35 +2,9 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://example.com/neurofibromatosis.json",
   "definitions": {
-    "study": {
-      "description": "This key represents a way to divide up research projects within or across consoritia",
-      "anyOf": [
-        {
-          "const": "Cell Culture",
-          "description": "NTAP-funded cell culture initiative related data",
-          "source": "http://www.n-tap.org/initiatives/cell-culture-models/"
-        },
-        {
-          "const": "Unsolicited",
-          "description": "NTAP-funded unsolicited efforts",
-          "source": "http://www.n-tap.org/initiatives/open-proposal-program/"
-        },
-        {
-          "const": "PRO",
-          "description": "NTAP-funded patient-related outcome program data",
-          "source": "http://www.n-tap.org/initiatives/patient-reported-outcomes/"
-        },
-        {
-          "const": "Francis Collins",
-          "description": "NTAP-funded Francis Collins scholar program data",
-          "source": "http://www.n-tap.org/initiatives/collins-scholars/"
-        },
-        {
-          "const": "Cutaneous NF",
-          "description": "Data derived from the CTF-funded cNF efforts",
-          "source": ""
-        }
-      ]
+    "reportMilestone": {
+      "description": "This key represents the milestone for which the report was submitted, a number representing number of months.",
+      "type": "integer"
     },
     "nf2Genotype": {
       "description": "Genotype of NF2 gene, if known",

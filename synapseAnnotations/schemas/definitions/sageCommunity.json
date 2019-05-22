@@ -441,11 +441,6 @@
           "source": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000469.shtml"
         },
         {
-          "const": "xml",
-          "description": "eXtensible Markup Language (XML) format.",
-          "source": "http://edamontology.org/format_2332"
-        },
-        {
           "const": "gzip",
           "description": "GZipped format",
           "source": "http://purl.obolibrary.org/obo/NCIT_C80220"
@@ -499,6 +494,16 @@
           "const": "sra",
           "description": "SRA archive format (SRA) is the archive format used for input to the NCBI Sequence Read Archive.",
           "source": "http://edamontology.org/format_3698"
+        },
+        {
+          "const": "recal",
+          "description": ".recal file from GATK VQSR",
+          "source": "https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_variantrecalibration_VariantRecalibrator.php#--recal_file"
+        },
+        {
+          "const": "tranches",
+          "description": ".tranches file from GATK VQSR",
+          "source": "https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_variantrecalibration_VariantRecalibrator.php#--tranches_file"
         }
       ]
     },

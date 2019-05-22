@@ -34,8 +34,8 @@
         },
         {
           "const": "container",
-          "description": "",
-          "source": ""
+          "description": "A standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.",
+          "source": "Sage Bionetworks"
         },
         {
           "const": "graphical user interface",
@@ -162,14 +162,14 @@
           "source": ""
         },
         {
-          "const": "containerRegistry",
-          "description": "",
-          "source": ""
+          "const": "container image repository",
+          "description": "A location that hosts built container images",
+          "source": "Sage Bionetworks"
         },
         {
-          "const": "containerToolRegistry",
-          "description": "",
-          "source": ""
+          "const": "container registry",
+          "description": "A location that registers container images",
+          "source": "Sage Bionetworks"
         }
       ]
     },

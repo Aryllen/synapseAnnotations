@@ -484,11 +484,6 @@
           "source": "https://www.synapse.org/#!Synapse:syn5714307"
         },
         {
-          "const": "iPSCAstrocytes",
-          "description": "iPSC derived astrocytes",
-          "source": "https://www.synapse.org/#!Synapse:syn10344967"
-        },
-        {
           "const": "iPSC-HiC",
           "description": "Human induced pluripotent stem cells (hiPSCs).",
           "source": "https://www.synapse.org/#!Synapse:syn12979149"

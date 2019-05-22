@@ -62,25 +62,14 @@
   "required": [
     "resourceType", "assay", "species", "organ", "tissue", "fileFormat", "dataType", "dataSubtype", "specimenID", "grant", "study", "consortium", "isModelSystem", "specimenIdSource"
   ],
-  "anyOf": [
+  "allOf": [
     {
-      "not": {
-        "properties": {
-          "assay": {
-            "enum": [
-              "ChIPSeq"
-            ]
-          }
-        },
-        "required": [
-          "assay"
-        ]
+      "if": {
+        "properties": {"assay": {"const": "ChIPSeq"}}
+      },
+      "then": {
+        "required": ["assayTarget"]
       }
-    },
-    {
-      "required": [
-        "assayTarget"
-      ]
     }
   ]
 }

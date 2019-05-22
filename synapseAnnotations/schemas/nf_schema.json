@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id":"http://example.com/ampad_schema.json",
+  "title": "experiment",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "$ref": "sageCommunity.json#/definitions/resourceType"
+    },
+    "fundingAgency": {
+      "$ref": "sageCommunity.json#/definitions/fundingAgency"
+    },
+    "fileFormat": {
+      "$ref": "sageCommunity.json#/definitions/fileFormat"
+    },
+    "consortium": {
+      "$ref": "sageCommunity.json#/definitions/consortium"
+    },
+    "assay": {
+      "$ref": "experimentalData.json#/definitions/assay"
+    },
+    "dataType": {
+      "$ref": "experimentalData.json#/definitions/dataType"
+    },
+    "dataSubtype": {
+      "$ref": "experimentalData.json#/definitions/dataSubtype"
+    },
+    "specimenID": {
+      "$ref": "experimentalData.json#/definitions/specimenID"
+    },
+    "species": {
+      "$ref": "experimentalData.json#/definitions/species"
+    },
+    "isCellLine": {
+      "$ref": "experimentalData.json#/definitions/isCellLine"
+    },
+    "sex": {
+      "$ref": "experimentalData.json#/definitions/sex"
+    },
+    "platform": {
+      "$ref": "experimentalData.json#/definitions/platform"
+    },
+    "readLength": {
+      "$ref": "ngs.json#/definitions/readLength"
+    },
+    "readPair": {
+      "$ref": "ngs.json#/definitions/readPair"
+    },
+    "runType": {
+      "$ref": "ngs.json#/definitions/runType"
+    },
+    "isStranded": {
+      "$ref": "ngs.json#/definitions/isStranded"
+    },
+    "dissociationMethod": {
+      "$ref": "ngs.json#/definitions/dissociationMethod"
+    },
+    "nucleicAcidSource": {
+      "$ref": "ngs.json#/definitions/nucleicAcidSource"
+    },
+    "libraryPrep": {
+      "$ref": "ngs.json#/definitions/libraryPrep"
+    },
+    "libraryPreparationMethod": {
+      "$ref": "ngs.json#/definitions/libraryPreparationMethod"
+    }
+  },
+  "required": [
+    "resourceType", "fileFormat", "fundingAgency", "consortium"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {"resourceType": {"const": "experimentalData"}}
+      },
+      "then": {
+        "required": ["assay", "dataType", "dataSubtype", "specimenID", "species", "isCellLine", "sex"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assay": {
+            "anyOf": [
+              {"const": "rnaSeq"},
+              {"const": "exomeSeq"},
+              {"const": "wholeGenomeSeq"},
+              {"const": "mrnaSeq"}
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "platform",
+          "readLength",
+          "readPair",
+          "runType",
+          "isStranded",
+          "dissociationMethod",
+          "nucleicAcidSource",
+          "libraryPrep",
+          "libraryPreparationMethod"
+        ]
+      }
+    }
+  ]
+}

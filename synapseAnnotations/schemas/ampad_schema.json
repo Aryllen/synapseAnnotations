@@ -60,16 +60,129 @@
     }
   },
   "required": [
-    "resourceType", "assay", "species", "organ", "tissue", "fileFormat", "dataType", "dataSubtype", "specimenID", "grant", "study", "consortium", "isModelSystem", "specimenIdSource"
+    "consortium",
+    "study",
+    "grant",
+    "dataType",
+    "fileFormat",
+    "species"
   ],
   "allOf": [
     {
       "if": {
-        "properties": {"assay": {"const": "ChIPSeq"}}
+        "properties": {
+          "resourceType": {
+            "const": "experimentalData"
+          }
+        }
       },
       "then": {
-        "required": ["assayTarget"]
+        "required": ["assay", "specimenID"]
       }
-    }
+    },
+    {
+      "if": {
+        "properties": {
+          "assay": {
+            "anyOf": [
+              {"const": "rnaSeq"},
+              {"const": "ATACSeq"}
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "readLength",
+          "runType"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assay": {
+            "const": "ChIPSeq"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "assayTarget",
+          "readLength",
+          "runType"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assay": {
+            "const": "scRNAseq"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "nucleicAcidSource",
+          "readLength",
+          "runType"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "assay": {
+            "const": "wholeGenomeSeq"
+          }
+        }
+      },
+      "then": {
+        "required": ["isMultiSpecimen"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "isModelSystem": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "required": ["sex"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "isCellLine": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "terminalDifferentiationPoint",
+          "cellType"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "species": {
+            "const": "Mouse"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "modelSystemName",
+          "modelSystemStrainNomenclature"
+        ]
+      }
+    },
   ]
 }

@@ -1,11 +1,12 @@
 # Schemas
 
-An example schema for AMP-AD. It references the definitions in the
-`definitions/` folder. To check that the schema is valid JSON Schema using
+Example schemas for AMP-AD and NF. They reference the definitions in the
+`definitions/` folder. To check that the schemas are valid JSON Schema using
 [ajv-cli](https://github.com/jessedc/ajv-cli):
 
 ```
 ajv compile -s ampad_schema.json -r "definitions/*.json"
+ajv compile -s nf_schema.json -r "definitions/*.json"
 ```
 
 To validate sample data against the AMP-AD schema:

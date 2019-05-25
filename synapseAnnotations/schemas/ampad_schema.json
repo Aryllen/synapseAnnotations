@@ -4,29 +4,17 @@
   "title": "experiment",
   "type": "object",
   "properties": {
-    "resourceType": {
-      "$ref": "sageCommunity.json#/definitions/resourceType"
-    },
     "assay": {
       "$ref": "experimentalData.json#/definitions/assay"
     },
     "assayTarget": {
       "$ref": "experimentalData.json#/definitions/assayTarget"
     },
-    "species": {
-      "$ref": "experimentalData.json#/definitions/species"
-    },
-    "organ": {
-      "$ref": "experimentalData.json#/definitions/organ"
-    },
-    "tissue": {
-      "$ref": "experimentalData.json#/definitions/tissue"
-    },
     "cellType": {
       "$ref": "experimentalData.json#/definitions/cellType"
     },
-    "fileFormat": {
-      "$ref": "sageCommunity.json#/definitions/fileFormat"
+    "consortium": {
+      "$ref": "sageCommunity.json#/definitions/consortium"
     },
     "dataType": {
       "$ref": "experimentalData.json#/definitions/dataType"
@@ -34,11 +22,11 @@
     "dataSubtype": {
       "$ref": "experimentalData.json#/definitions/dataSubtype"
     },
-    "specimenID": {
-      "$ref": "experimentalData.json#/definitions/specimenID"
+    "fileFormat": {
+      "$ref": "sageCommunity.json#/definitions/fileFormat"
     },
-    "specimenIdSource": {
-      "$ref": "experimentalData.json#/definitions/specimenIdSource"
+    "grant": {
+      "$ref": "neuro.json#/definitions/grant"
     },
     "individualID": {
       "$ref": "experimentalData.json#/definitions/individualID"
@@ -46,17 +34,56 @@
     "individualIdSource": {
       "$ref": "experimentalData.json#/definitions/individualIdSource"
     },
-    "grant": {
-      "$ref": "neuro.json#/definitions/grant"
+    "isCellLine": {
+      "$ref": "experimentalData.json#/definitions/isCellLine"
+    },
+    "isMultiSpecimen": {
+      "$ref": "experimentalData.json#/definitions/isMultiSpecimen"
+    },
+    "isModelSystem": {
+      "$ref": "neuro.json#/definitions/isModelSystem"
+    },
+    "modelSystemName": {
+      "$ref": "neuro.json#/definitions/modelSystemName"
+    },
+    "modelSystemStrainNomenclature": {
+      "$ref": "neuro.json#/definitions/modelSystemStrainNomenclature"
+    },
+    "nucleicAcidSource": {
+      "$ref": "ngs.json#/definitions/nucleicAcidSource"
+    },
+    "organ": {
+      "$ref": "experimentalData.json#/definitions/organ"
+    },
+    "readLength": {
+      "$ref": "ngs.json#/definitions/readLength"
+    },
+    "resourceType": {
+      "$ref": "sageCommunity.json#/definitions/resourceType"
+    },
+    "runType": {
+      "$ref": "ngs.json#/definitions/runType"
+    },
+    "sex": {
+      "$ref": "experimentalData.json#/definitions/sex"
+    },
+    "species": {
+      "$ref": "experimentalData.json#/definitions/species"
+    },
+    "specimenID": {
+      "$ref": "experimentalData.json#/definitions/specimenID"
+    },
+    "specimenIdSource": {
+      "$ref": "experimentalData.json#/definitions/specimenIdSource"
     },
     "study": {
       "$ref": "neuro.json#/definitions/study"
     },
-    "consortium": {
-      "$ref": "sageCommunity.json#/definitions/consortium"
+    "terminalDifferentiationPoint": {
+      "$ref": "experimentalData.json#/definitions/terminalDifferentiationPoint"
     },
-    "isModelSystem": {
-      "$ref": "neuro.json#/definitions/isModelSystem"
+    "tissue": {
+      "$ref": "experimentalData.json#/definitions/tissue"
     }
   },
   "required": [
@@ -183,6 +210,6 @@
           "modelSystemStrainNomenclature"
         ]
       }
-    },
+    }
   ]
 }

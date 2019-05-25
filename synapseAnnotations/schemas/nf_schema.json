@@ -4,20 +4,23 @@
   "title": "experiment",
   "type": "object",
   "properties": {
-    "resourceType": {
-      "$ref": "sageCommunity.json#/definitions/resourceType"
+    "assay": {
+      "$ref": "experimentalData.json#/definitions/assay"
     },
-    "fundingAgency": {
-      "$ref": "sageCommunity.json#/definitions/fundingAgency"
+    "assayTarget": {
+      "$ref": "experimentalData.json#/definitions/assayTarget"
     },
-    "fileFormat": {
-      "$ref": "sageCommunity.json#/definitions/fileFormat"
+    "cellType": {
+      "$ref": "experimentalData.json#/definitions/cellType"
+    },
+    "chemicalStructure": {
+      "$ref": "chem.json#/definitions/chemicalStructure"
     },
     "consortium": {
       "$ref": "sageCommunity.json#/definitions/consortium"
     },
-    "assay": {
-      "$ref": "experimentalData.json#/definitions/assay"
+    "curatedDataType": {
+      "$ref": "curatedData.json#/definitions/curatedDataType"
     },
     "dataType": {
       "$ref": "experimentalData.json#/definitions/dataType"
@@ -25,20 +28,41 @@
     "dataSubtype": {
       "$ref": "experimentalData.json#/definitions/dataSubtype"
     },
-    "specimenID": {
-      "$ref": "experimentalData.json#/definitions/specimenID"
+    "diagnosis": {
+      "$ref": "experimentalData.json#/definitions/diagnosis"
     },
-    "species": {
-      "$ref": "experimentalData.json#/definitions/species"
+    "dissociationMethod": {
+      "$ref": "ngs.json#/definitions/dissociationMethod"
+    },
+    "fileFormat": {
+      "$ref": "sageCommunity.json#/definitions/fileFormat"
+    },
+    "fundingAgency": {
+      "$ref": "sageCommunity.json#/definitions/fundingAgency"
+    },
+    "inputDataType": {
+      "$ref": "tool.json#/definitions/inputDataType"
     },
     "isCellLine": {
       "$ref": "experimentalData.json#/definitions/isCellLine"
     },
-    "sex": {
-      "$ref": "experimentalData.json#/definitions/sex"
+    "isStranded": {
+      "$ref": "ngs.json#/definitions/isStranded"
     },
-    "platform": {
-      "$ref": "experimentalData.json#/definitions/platform"
+    "libraryPrep": {
+      "$ref": "ngs.json#/definitions/libraryPrep"
+    },
+    "libraryPreparationMethod": {
+      "$ref": "ngs.json#/definitions/libraryPreparationMethod"
+    },
+    "nucleicAcidSource": {
+      "$ref": "ngs.json#/definitions/nucleicAcidSource"
+    },
+    "organ": {
+      "$ref": "experimentalData.json#/definitions/organ"
+    },
+    "outputDataType": {
+      "$ref": "tool.json#/definitions/outputDataType"
     },
     "readLength": {
       "$ref": "ngs.json#/definitions/readLength"
@@ -46,23 +70,29 @@
     "readPair": {
       "$ref": "ngs.json#/definitions/readPair"
     },
+    "resourceType": {
+      "$ref": "sageCommunity.json#/definitions/resourceType"
+    },
     "runType": {
       "$ref": "ngs.json#/definitions/runType"
     },
-    "isStranded": {
-      "$ref": "ngs.json#/definitions/isStranded"
+    "sex": {
+      "$ref": "experimentalData.json#/definitions/sex"
     },
-    "dissociationMethod": {
-      "$ref": "ngs.json#/definitions/dissociationMethod"
+    "softwareLanguage": {
+      "$ref": "tool.json#/definitions/softwareLanguage"
     },
-    "nucleicAcidSource": {
-      "$ref": "ngs.json#/definitions/nucleicAcidSource"
+    "softwareName": {
+      "$ref": "tool.json#/definitions/softwareName"
     },
-    "libraryPrep": {
-      "$ref": "ngs.json#/definitions/libraryPrep"
+    "softwareType": {
+      "$ref": "tool.json#/definitions/softwareType"
     },
-    "libraryPreparationMethod": {
-      "$ref": "ngs.json#/definitions/libraryPreparationMethod"
+    "species": {
+      "$ref": "experimentalData.json#/definitions/species"
+    },
+    "specimenID": {
+      "$ref": "experimentalData.json#/definitions/specimenID"
     }
   },
   "required": [

@@ -1,6 +1,10 @@
 {
   "resourceType": "experimentalData",
   "assay": "ChIPSeq",
+  "readLength": "100",
+  "runType": "pairedEnd",
+  "terminalDifferentiationPoint": "lsdkfj",
+  "cellType": "B-lymphocytes",
   "assayTarget": "H3K9ac",
   "species": "Human",
   "organ": "brain",

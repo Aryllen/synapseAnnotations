@@ -83,22 +83,22 @@
         {
           "const": "AMP-AD",
           "description": "Accelerating Medicines Partnership-Alzheimer's Disease",
-          "source": "https://www.synapse.org/ampad"
+          "source": "https://adknowledgeportal.synapse.org/"
         },
         {
           "const": "MODEL-AD",
           "description": "Model Development and Evaluation for Late Onset AD",
-          "source": "https://www.synapse.org/ampad"
+          "source": "https://adknowledgeportal.synapse.org/"
         },
         {
           "const": "M2OVE-AD",
           "description": "Molecular Mechanisms of the Vascular Etiology of Alzheimer's Disease ",
-          "source": "https://www.synapse.org/ampad"
+          "source": "https://adknowledgeportal.synapse.org/"
         },
         {
           "const": "Resilience-AD",
           "description": "Interdisciplinary Research to Understand the Complex Biology of Resilience to Alzheimer's Disease Risk",
-          "source": "https://www.synapse.org/ampad"
+          "source": "https://adknowledgeportal.synapse.org/"
         },
         {
           "const": "BSMN",
@@ -140,6 +140,11 @@
     "fileFormat": {
       "description": "Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software",
       "anyOf": [
+        {
+          "const": "Synapse Table",
+          "description": "Table hosted at synapse.org",
+          "source": "https://docs.synapse.org/articles/tables.html"
+        },
         {
           "const": "bash script",
           "description": "Bash Shell Script",
@@ -504,6 +509,31 @@
           "const": "tranches",
           "description": ".tranches file from GATK VQSR",
           "source": "https://software.broadinstitute.org/gatk/documentation/tooldocs/3.8-0/org_broadinstitute_gatk_tools_walkers_variantrecalibration_VariantRecalibrator.php#--tranches_file"
+        },
+        {
+          "const": "mtx",
+          "description": "Matrix Market Exchange Format",
+          "source": "https://math.nist.gov/MatrixMarket/formats.html#MMformat"
+        },
+        {
+          "const": "tagAlign",
+          "description": "Tag Alignment provides genomic mapping of short sequence tags.",
+          "source": "https://genome.ucsc.edu/FAQ/FAQformat.html#format15"
+        },
+        {
+          "const": "dup",
+          "description": "output of the Picard MarkDuplicates tool.",
+          "source": "https://software.broadinstitute.org/gatk/documentation/tooldocs/4.0.4.0/picard_sam_markduplicates_MarkDuplicates.php"
+        },
+        {
+          "const": "DICOM",
+          "description": "A comprehensive set of standards for communications between medical imaging devices, including handling, storing and transmitting information in medical imaging. It includes a file format definition and a network communication protocol.",
+          "source": "http://purl.obolibrary.org/obo/NCIT_C49059"
+        },
+        {
+          "const": "czi",
+          "description": "microscopy imaging file format that saves multidimensional images such as time lapse, Z-stacks, multiposition experiments and virtual slides, combined with relevant meta information",
+          "source": "https://www.zeiss.com/microscopy/int/products/microscope-software/zen/czi.html"
         }
       ]
     },
@@ -589,6 +619,31 @@
           "const": "IU-JAX",
           "description": "Group from neuro consortia.",
           "source": "Sage Bionetworks"
+        },
+        {
+          "const": "IU_PTC",
+          "description": "Indiana University pre-clinical testing core -- group from neuro consortia.",
+          "source": "https://model-ad.org/preclinical-testing-core/"
+        },
+        {
+          "const": "Pitt_PTC",
+          "description": "University of Pittsburgh pre-clinical testing core -- group from neuro consortia.",
+          "source": "https://model-ad.org/preclinical-testing-core/"
+        },
+        {
+          "const": "Jax_DMP",
+          "description": "The Jackson Laboratory disease modeling project -- group from neuro consortia.",
+          "source": "https://model-ad.org/disease-modeling-project/"
+        },
+        {
+          "const": "IU_DMP",
+          "description": "Indiana University disease modeling project -- group from neuro consortia.",
+          "source": "https://model-ad.org/disease-modeling-project/"
+        },
+        {
+          "const": "UCI_DMP",
+          "description": "University of California at Irvine disease modeling project -- group from neuro consortia.",
+          "source": "https://model-ad.org/uci-disease-model-development-and-phenotyping-dmp/"
         },
         {
           "const": "Columbia-SUNY",

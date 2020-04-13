@@ -34,18 +34,7 @@
     },
     "isStranded": {
       "description": "Whether or not the library is stranded.",
-      "anyOf": [
-        {
-          "const": true,
-          "description": "",
-          "source": ""
-        },
-        {
-          "const": false,
-          "description": "",
-          "source": ""
-        }
-      ]
+      "type": "boolean"
     },
     "readPairOrientation": {
       "description": "The relative orientation of the reads in a paired-end protocol",
@@ -108,6 +97,16 @@
           "const": "miRNAenrichment",
           "description": "RNA library with size selection for microRNAs",
           "source": "Sage Bionetworks"
+        },
+        {
+          "const": "PCRfree",
+          "description": "Library preparation without PCR amplification",
+          "source": "Sage Bionetworks"
+        },
+        {
+          "const": "STARRSeq",
+          "description": "Self-transcribing active regulatory region sequencing assay (STARR-Seq)",
+          "source": "http://purl.obolibrary.org/obo/OBI_0002041"
         }
       ]
     },
@@ -138,6 +137,16 @@
           "const": "TruSeq",
           "description": "TruSeq library preparation",
           "source": "https://github.com/HumanCellAtlas/metadata-schema/blob/master/json_schema/type/process/sequencing/library_preparation_process.json"
+        },
+        {
+          "const": "Smart-seq4",
+          "description": "Smart-seq4 library preparation",
+          "source": "https://www.takarabio.com/products/next-generation-sequencing/single-cell-rna-and-dna-seq/smart-seq-v4-for-mrna-seq"
+        },
+        {
+          "const": "Omni-ATAC",
+          "description": "Omni-ATAC-seq library preparation",
+          "source": "https://protocolexchange.researchsquare.com/article/nprot-6107/v1"
         }
       ]
     },

@@ -9,7 +9,6 @@
   "species": "Human",
   "organ": "brain",
   "tissue": "dorsolateral prefrontal cortex",
-  "fileFormat": "bam",
   "dataType": "chromatinActivity",
   "dataSubtype": "raw",
   "specimenID": "20455807.bam",
